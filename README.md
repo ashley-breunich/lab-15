@@ -28,4 +28,13 @@ Implement Role Based Authentication
 * Add tests to the api routes, asserting restricted access to the routes as shown.
 
 #### Documentation
-Write a description of the project in your README.md, including detailed instructions for how to build your app. In your frontend README.md add a code block with your frontend .env vars, and in your backend README.md add a code block with your backend .env vars.
+
+##### Getting Started
+In order to use this program, a user would need to fork this repo and clone it down from their machine. They can use [this](https://github.com/ashley-breunich/lab-15) link to access the repository. They would need to install the dependencies (npm install) before beginning. 
+
+##### .env Variables
+```
+PORT=3000
+STORAGE=mongo
+MONGODB_URI=mongodb://localhost:27017/store
+```
