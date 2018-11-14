@@ -3,9 +3,9 @@
 import User from './model.js';
 
 export default (capability) => {
-
+  
+  console.log('capability to test for', capability);
   return (req, res, next) => {
-
     try {
 
       let [authType, authString] = req.headers.authorization.split(/\s+/);
@@ -14,12 +14,12 @@ export default (capability) => {
       // BEARER Auth ... Authorization:Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI
 
       switch(authType.toLowerCase()) {
-        case 'basic':
-          return _authBasic(authString);
-        case 'bearer':
-          return _authBearer(authString);
-        default:
-          return _authError();
+      case 'basic':
+        return _authBasic(authString);
+      case 'bearer':
+        return _authBearer(authString);
+      default:
+        return _authError();
       }
 
     } catch(e) {
